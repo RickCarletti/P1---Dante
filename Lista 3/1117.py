@@ -8,4 +8,4 @@ while len(notas) is not qtdeNotas:
     else: print("nota invalida")
 for x in range(len(notas)): resultado += notas[x]
 resultado = resultado / len(notas)
-print("media = ", "%.2f" % resultado)
+print("media = ", "%.2f" % resultado, sep="")
