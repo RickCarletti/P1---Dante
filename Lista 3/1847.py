@@ -24,7 +24,6 @@ def estaoFelizesComEssasTemperaturas(entradas):
                 if not subiuNoSTerceiro or constanteTerceiro: tristes()
                 elif subiuNoSTerceiro:
                     if not cresceuMais: felizes()
-
                     elif cresceuIgual or cresceuMais: tristes()
             elif not subiuNoSegundo:
                 if subiuNoSTerceiro or constanteTerceiro: felizes()
