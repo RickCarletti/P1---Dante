@@ -1,4 +1,5 @@
 nota = list(map(float, input().split()))
+
 media = ((nota[0]*2)+(nota[1]*3)+(nota[2]*4)+(nota[3]))/(2+3+4+1)
 print("Media:", "%.1f" % media)
 if media >= 7: print("Aluno aprovado")

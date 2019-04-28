@@ -1,10 +1,14 @@
 quantidadeValores = int(input())
-lista, nVezes = [], []
+lista = {}
 
 for i in range(quantidadeValores):
     entrada = int(input())
-    lista.append(entrada)
-    if j in nVezes:
-        nVezes += lista.count(i)
-    print(str(i) + " Aaparece " + str(nVezes) + " vez(es)")
 
+    if entrada in lista: lista[entrada] += 1
+    else: lista[entrada] = 1
+
+chaves = lista.keys()
+chaves = sorted(chaves)
+
+for i in chaves:
+    print(str(i) + " aparece " + str(lista[i]) +" vez(es)")
