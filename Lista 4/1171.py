@@ -1,14 +1,17 @@
 quantidadeValores = int(input())
-lista = {}
+lista = []
+aux = []
+listaResultado = []
 
 for i in range(quantidadeValores):
-    entrada = int(input())
+    lista.append(int(input()))
 
-    if entrada in lista: lista[entrada] += 1
-    else: lista[entrada] = 1
+for i in lista:
+   if i not in aux:
+       aux.append(i)
+       listaResultado.append([i, lista.count(i)])
 
-chaves = lista.keys()
-chaves = sorted(chaves)
+listaResultado.sort()
 
-for i in chaves:
-    print(str(i) + " aparece " + str(lista[i]) +" vez(es)")
+for i in listaResultado:
+    print(str(i[0]) + " aparece " + str(i[1]) +" vez(es)")
