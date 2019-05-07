@@ -5,12 +5,8 @@ def AchaNotas(val, lista):
         retorno.append(notas)
         val -= notas*i
     return retorno
-
 listaDeNotas = [50, 10, 5, 1]
-
 entrada = int(input())
-
 resultado = AchaNotas(entrada, listaDeNotas)
-
 for i in resultado:
     print(i, end=" ")
