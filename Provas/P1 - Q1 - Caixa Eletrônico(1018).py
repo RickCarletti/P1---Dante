@@ -6,10 +6,11 @@ def AchaNotas(val, lista):
         val -= notas*i
     return retorno
 
-listaDeNotas = [100, 50, 20, 10, 5, 2, 1]
+listaDeNotas = [50, 10, 5, 1]
 
 entrada = int(input())
 
 resultado = AchaNotas(entrada, listaDeNotas)
 
-print(resultado)
+for i in resultado:
+    print(i, end=" ")
