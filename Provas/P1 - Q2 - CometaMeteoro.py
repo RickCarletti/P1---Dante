@@ -10,7 +10,7 @@ while repetindo:
         qte = int(input())
         for i in range(qte):
             meteoro.append(list(map(int, input().split())))
-            qte = 0
+        qte = 0
         for i in meteoro:
             if i[0] in range(x1, x2 + 1) and i[1] in range(y2, y1 + 1):
                 qte += 1
