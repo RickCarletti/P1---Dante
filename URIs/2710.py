@@ -2,10 +2,12 @@ def ValidaMap(elemento):
     if elemento.isdigit(): return int(elemento)
     else: return elemento
 
+
 def ValidaEntrada(A, B, C, D, val):
     listaDeValores = [A, B, C, D]
     if all(i >= 1 and i <= 500 for i in listaDeValores) and abs(val) <= 5000:
         return True
+
 
 def CriaMatriz(linhas, colunas, valor):
     matriz = []
@@ -14,14 +16,14 @@ def CriaMatriz(linhas, colunas, valor):
         for j in range(colunas):
             linha.append(valor)
         matriz.append(linha)
-
     return matriz
 
-matriz = CriaMatriz(500,500, 0)
+
 saida = []
+matriz = CriaMatriz(500, 500, 0)
 operacoes = int(input())
 
-if operacoes <=100000:
+if operacoes <= 100000:
     for i in range(operacoes):
         entrada = input().split()
         if entrada[0] == 'U':
