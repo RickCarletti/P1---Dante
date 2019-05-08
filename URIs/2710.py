@@ -28,9 +28,10 @@ if operacoes <=100000:
         if entrada[0] == 'U':
             U, X1, Y1, X2, Y2, V = map(ValidaMap, entrada)
             if ValidaEntrada(X1, Y1, X2, Y2, V):
-                for linha in range(10):
+
+                for linha in range(len(matriz)):
                     if linha in range(X1, X2+1):
-                        for coluna in range(10):
+                        for coluna in range(len(matriz[0])):
                             if coluna in range(Y1, Y2+1):
                                 matriz[linha][coluna] += V
 
