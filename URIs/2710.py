@@ -7,11 +7,11 @@ def ValidaEntrada(A, B, C, D, val):
     if all(i >= 1 and i <= 500 for i in listaDeValores) and abs(val) <= 5000:
         return True
 
-def CriaMatriz(n_linhas, n_colunas, valor):
+def CriaMatriz(linhas, colunas, valor):
     matriz = []
-    for i in range(n_linhas):
+    for i in range(linhas):
         linha = []
-        for j in range(n_colunas):
+        for j in range(colunas):
             linha.append(valor)
         matriz.append(linha)
 
@@ -24,11 +24,9 @@ operacoes = int(input())
 if operacoes <=100000:
     for i in range(operacoes):
         entrada = input().split()
-
         if entrada[0] == 'U':
             U, X1, Y1, X2, Y2, V = map(ValidaMap, entrada)
             if ValidaEntrada(X1, Y1, X2, Y2, V):
-
                 for linha in range(len(matriz)):
                     if linha in range(X1, X2+1):
                         for coluna in range(len(matriz[0])):
