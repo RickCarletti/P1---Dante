@@ -1,7 +1,8 @@
 A, B = input().split()
 
-while (A, B) != (0, 0):
-    digitos = [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0]]
+while (int(A), int(B)) != (0, 0):
+
+    digitos = [0]*10
     listaDeCaracteres = []
     numero = 0
 
@@ -10,11 +11,12 @@ while (A, B) != (0, 0):
         for j in frase:
                 listaDeCaracteres.extend(j)
 
-    for linha in digitos:
-        linha[1] = listaDeCaracteres.count(str(linha[0]))
+    for index, linha in enumerate(digitos):
+        digitos[index] = listaDeCaracteres.count(str(index))
 
-    for i in digitos:
-        print(i[1], end=" ")
-    print()
+    for index, i in enumerate(digitos):
+        if index == 9:
+            print(i)
+        else: print(i, end=" ")
 
     A, B = input().split()

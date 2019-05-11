@@ -8,6 +8,6 @@ def preenche(val):
         multi *= 2
     return resultado
 
-saida =  preenche(entrada)
+saida = preenche(entrada)
 for index, i in enumerate(saida):
     print("N[" + str(index) + "] = " + str(i))

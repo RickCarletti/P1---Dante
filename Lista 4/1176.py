@@ -4,26 +4,13 @@ def fibonacci(n):
     f = f / (5**.5)
     return f
 
+listaFibonacci = []
 
-vetor = []
-casos = int(input())
+for i in range(61):
+    listaFibonacci.append(fibonacci(i))
 
-for i in range(casos):
-    vetor.append(float(input()))
+vezes = int(input())
 
-
-if True:
-    saida = []
-    aux = 0
-    for index, i in enumerate(vetor):
-        if index > 1:
-            aux += fibonacci(i)
-
-            saida.append(aux)
-        else:
-            aux += fibonacci(index)
-
-    for index, i in enumerate(saida):
-        print( "Fib(" + str(index) + ") = " + str(i) )
-
-
+for i in range(vezes):
+    indicie = int(input())
+    print("Fib(" + str(indicie) + ") = " + str(int(listaFibonacci[indicie])))
