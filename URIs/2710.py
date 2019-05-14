@@ -1,3 +1,9 @@
+'''
+
+O DONO DO PROBLE DISSE QUE O URI ESTÁ ERRADO EM NÃO ACEITAR MINHA SOLUÇÃO...
+
+'''
+
 def ValidaMap(elemento):
     if elemento.isdigit(): return int(elemento)
     else: return elemento
