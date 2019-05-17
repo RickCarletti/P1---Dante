@@ -6,6 +6,7 @@ def fazMatriz(x):
         retorno.append([0]*x)
     return retorno
 
+resultado = []
 
 while dimensao > 0:
 
@@ -20,13 +21,25 @@ while dimensao > 0:
                 matriz[linha][coluna] += 1
         quadrante += 1
 
-    for linha in matriz:
+    resultado.append(matriz)
+
+    '''for linha in matriz:
         print("  ", end='')
         for index, coluna in enumerate(linha):
             if not index == len(linha)-1:
                 print(coluna, end="   ")
             else:
                 print(coluna)
-    print()
+    print()'''
 
     dimensao = int(input())
+
+for matriz in resultado:
+    for linha in matriz:
+        print("  ", end='')
+        for index, coluna in enumerate(linha):
+            if not index == len(linha) - 1:
+                print(coluna, end="   ")
+            else:
+                print(coluna)
+    print()
