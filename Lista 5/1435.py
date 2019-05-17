@@ -17,7 +17,7 @@ while dimensao > 0:
         min = quadrante
         for linha in range(min, max):
             for coluna in range(min, max):
-                matriz[linha][coluna] +=1
+                matriz[linha][coluna] += 1
         quadrante += 1
 
     for linha in matriz:
