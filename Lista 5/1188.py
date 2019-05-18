@@ -18,11 +18,15 @@ def constroiMatriz(x):
         retorno.append(aux)
     return retorno
 
+
 matriz = constroiMatriz(dimensao)
 
 for index, linha in enumerate(matriz):
-    aux = 12-index
-    elementos.extend(linha[aux::])
+    if index >= 7:
+        min = dimensao - index
+        maxi = dimensao - min
+        for coluna in range(min, maxi):
+            elementos.append(linha[coluna])
 
 if entrada == 'S':
     aux = 0

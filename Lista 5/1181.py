@@ -3,7 +3,7 @@ def constroiMatriz(x):
     for linha in range(x):
         aux = []
         for coluna in range(x):
-            aux.append(int(input()))
+            aux.append(float(input()))
         retorno.append(aux)
     return retorno
 
@@ -15,17 +15,18 @@ matriz = constroiMatriz(12)
 
 elementos = []
 
-for i in matriz[L]:
-    elementos.append(i)
+if L >=0 and L <=11:
+    for i in matriz[L]:
+        elementos.append(i)
 
-if T == 'S':
-    aux = 0
-    for i in elementos:
-        aux += i
-    print("%.1f" % aux)
-elif T == 'M':
-    aux = 0
-    for i in elementos:
-        aux += i
-    aux /= len(elementos)
-    print("%.1f" % aux)
+    if T == 'S':
+        aux = 0
+        for i in elementos:
+            aux += i
+        print("%.1f" % aux)
+    elif T == 'M':
+        aux = 0
+        for i in elementos:
+            aux += i
+        aux /= len(elementos)
+        print("%.1f" % aux)
