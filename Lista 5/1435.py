@@ -23,23 +23,23 @@ while dimensao > 0:
 
     resultado.append(matriz)
 
-    '''for linha in matriz:
-        print("  ", end='')
-        for index, coluna in enumerate(linha):
-            if not index == len(linha)-1:
-                print(coluna, end="   ")
-            else:
-                print(coluna)
-    print()'''
-
     dimensao = int(input())
 
 for matriz in resultado:
     for linha in matriz:
         print("  ", end='')
         for index, coluna in enumerate(linha):
-            if not index == len(linha) - 1:
-                print(coluna, end="   ")
+            if index == 0:
+
+                print(coluna, end='')
+
             else:
-                print(coluna)
+
+                msg = ""
+                qtdCaracteres = len(str(coluna))
+                for i in range(qtdCaracteres, 4):
+                    msg += " "
+                print(msg + str(coluna), end='')
+
+        print()
     print()
