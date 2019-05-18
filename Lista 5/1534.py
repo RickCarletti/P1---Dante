@@ -1,4 +1,3 @@
-entrada = input()
 matriz = []
 
 def fazMatriz(x):
@@ -8,11 +7,14 @@ def fazMatriz(x):
     return retorno
 
 
-while entrada.isdigit():
+while True:
+    try:
+        entrada = input()
+        entrada = int(entrada)
+    except:
+        break
 
-    entrada = int(entrada)
-
-    if 3 <= entrada <= 70:
+    if 3 <= entrada < 70:
 
         aux = fazMatriz(entrada)
 
@@ -24,10 +26,8 @@ while entrada.isdigit():
 
         matriz.append(aux)
 
-        entrada = input()
-
-for o in matriz:
-    for i in o:
-        for j in i:
-            print(j, end='')
+for objeto in matriz:
+    for linha in objeto:
+        for coluna in linha:
+            print(coluna, end='')
         print()
