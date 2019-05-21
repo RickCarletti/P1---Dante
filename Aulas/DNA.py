@@ -22,4 +22,4 @@ dnaDoenca = geraDNA(tamDnaDoeca)
 if examinaDNA(dnaPessoa, dnaDoenca, qtdeOcorrencias):
     print("Doente")
 else:
-    print("Passou")
+    print("...")
