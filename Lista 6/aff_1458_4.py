@@ -5,7 +5,7 @@ xyTeclas = [[1,2,3],[4,5,6],[7,8,9],['_', 0, '#']]
 cmPorSeg = 30
 tempoDePressionar = .2
 
-palavra = 'ogro'
+palavra = 'ad'
 
 press = []
 
