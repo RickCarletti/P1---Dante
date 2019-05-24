@@ -33,3 +33,4 @@ for i in range(1, len(matring[0])-1):
 
 for c in resultado:
     print(str(chr(c)), end='')
+print()
