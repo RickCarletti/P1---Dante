@@ -2,6 +2,7 @@ listaDePrimos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
 
 
 def fatPrimos(n):
+
     if n <= 0:
         return [0]
     elif n == 1:
