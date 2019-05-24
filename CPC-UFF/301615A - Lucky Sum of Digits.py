@@ -23,7 +23,7 @@ def hasLucky2(num, lista, pos):
     else:
         print(restoDoMaior)
         resultado.append(restoDoMaior)
-        hasLucky2(num, lista, pos-1)
+        hasLucky2(num, lista, pos)
 
 
 
