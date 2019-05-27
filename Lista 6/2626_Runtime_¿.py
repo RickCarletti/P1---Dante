@@ -12,7 +12,8 @@ def validaEntradas(tam, entradas, validacoes):
 
 
 def vencedor(ordemDLP, lista):
-    def vence(A, B): return (A == 'pedra' and B == 'tesoura') or (A == 'papel' and B == 'pedra') or (A == 'tesoura' and B == 'papel')
+    def vence(A, B):
+        return (A == 'pedra' and B == 'tesoura') or (A == 'papel' and B == 'pedra') or (A == 'tesoura' and B == 'papel')
     dodo, leo, pepper = ordemDLP[0], ordemDLP[1], ordemDLP[2]
     resp = lista
     if vence(dodo, pepper) and vence(dodo, leo): return resp['Dodô']
