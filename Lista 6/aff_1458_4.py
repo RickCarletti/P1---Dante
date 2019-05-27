@@ -81,9 +81,9 @@ while True:
                 # print(mov, custoDeMovimento(prevPolegarDireito, mov))
                 # print(mov, tempoDePressionar)
                 prevPolegarEsquerdo = mov
-
+    '''
     print("  Teclas pressionadas -> [tecla, vezes]:  ", str(press).replace('[[', '[').replace(']]', ']'))
     print("           Sequencia de pressionamentos:  ", movPolegar)
     print("                                  Tempo:   %.2f" % tempo)
-
-    # print('%.2f' % tempo)
+    '''
+    print('%.2f' % tempo)
