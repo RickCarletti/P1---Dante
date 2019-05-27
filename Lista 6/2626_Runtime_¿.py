@@ -1,11 +1,11 @@
-listaDeRespostas = {'Dodô' : 'Os atributos dos monstros vao ser inteligencia, sabedoria...', 'Leo' : 'Iron Maiden’s gonna get you, no matter how far!', 'Pepper' : 'Urano perdeu algo muito precioso...', 'empate' : 'Putz vei, o Leo ta demorando muito pra jogar...'}
+listaDeRespostas = {'Dodô' : 'Os atributos dos monstros vao ser inteligencia, sabedoria...', 'Leo' : "Iron Maiden's gonna get you, no matter how far!", 'Pepper' : 'Urano perdeu algo muito precioso...', 'empate' : 'Putz vei, o Leo ta demorando muito pra jogar...'}
 listaDeValidacao = {'pedra', 'papel', 'tesoura'}
 
 
 def validaEntradas(tam, entradas, validacoes):
     if not entradas:
         return 'EOF'
-    elif len(entradas) != tam or [False for entrada in entradas if entrada not in validacoes]:
+    if len(entradas) != tam or [False for entrada in entradas if entrada not in validacoes]:
         return False
     else:
         return [entradas[0], entradas[1], entradas[2]]
@@ -25,8 +25,12 @@ def vencedor(ordemDLP, lista):
 validas = False
 
 while validas is not 'EOF':
+    try:
 
-    validas = validaEntradas(3, input().split(), listaDeValidacao)
+        validas = validaEntradas(3, input().split(), listaDeValidacao)
+
+    except EOFError:
+        break
 
     if validas not in [False, 'EOF']:
         print(vencedor(validas, listaDeRespostas))
