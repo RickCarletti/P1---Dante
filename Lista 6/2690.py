@@ -8,7 +8,7 @@ for vez in range(vezes):
 
     saida = ''
 
-    frase = ''.join([x for index, x in enumerate(input().replace(' ', '')) if index < 13])
+    frase = input() # ''.join([x for index, x in enumerate(input().replace(' ', '')) if index < 21])
 
     for caractere in frase:
 
