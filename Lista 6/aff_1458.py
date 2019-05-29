@@ -1,16 +1,14 @@
 teclado =[ [2, ['a','b','c','2']], [3, ['d','e','f','3']], [4, ['g','h','i','4']], [5, ['j','k','l','5']], [6, ['m','n','o','6']], [7, ['p','q','r','s','7']], [8, ['t','u','v','8']], [9, ['w','x','y','z','9']] ]
 #1cm de lado, 30cm/s, .02s
-xyTeclas = [[1,2,3],[4,5,6],[7,8,9],['_', 0, '#']]
+xyTeclas = [[1,2,3],[4,5,6],[7,8,9],['_',0,'#']]
 
-cmPorSeg = 30
+velocidade = 30
 tempoDePressionar = .2
 
 while True:
     palavra = input()
 
     press = []
-
-    tempo = 0
 
     # teclas cada e quantas vezes
     prev = ''
@@ -43,25 +41,25 @@ while True:
 
 
     # --------------------------------------------------------------------- AFF
-    def custoDeMovimento(I, F):
-        coorIni, coorFin = coordenada(I), coordenada(F)
+    def custoDeMovimento(inicio, fim):
+        coorIni, coorFin = coordenada(inicio), coordenada(fim)
         linha, coluna = abs(coorIni[0] - coorFin[0]), abs(coorIni[1] - coorFin[1])
         xy = [linha, coluna]
 
-        custo = 0
-
         if not all(xy):
+            cm = 0
             for i in xy:
-                custo += i
-            return custo / cmPorSeg
+                cm += i
+            return cm / velocidade
         else:
             hipotenusa = (xy[0] ** 2 + xy[1] ** 2) ** (1/2)
-            return hipotenusa / cmPorSeg
+            return hipotenusa / velocidade
 
 
     # tempos
     prevPolegarDireito = 6
     prevPolegarEsquerdo = 4
+    tempo = 0
 
     for index, mov in enumerate(movPolegar):
 
@@ -69,14 +67,17 @@ while True:
             tempo += tempoDePressionar
             # print(mov, tempoDePressionar)
         else:
-            if custoDeMovimento(prevPolegarDireito, mov) < custoDeMovimento(prevPolegarEsquerdo, mov):
-                tempo += custoDeMovimento(prevPolegarDireito, mov)
+            custoDestro = custoDeMovimento(prevPolegarDireito, mov)
+            custoCanhoto = custoDeMovimento(prevPolegarEsquerdo, mov)
+
+            if custoDestro < custoCanhoto:
+                tempo += custoDestro
                 tempo += tempoDePressionar
                 # print(mov, custoDeMovimento(prevPolegarDireito, mov))
                 # print(mov, tempoDePressionar)
                 prevPolegarDireito = mov
             else:
-                tempo += custoDeMovimento(prevPolegarEsquerdo, mov)
+                tempo += custoCanhoto
                 tempo += tempoDePressionar
                 # print(mov, custoDeMovimento(prevPolegarDireito, mov))
                 # print(mov, tempoDePressionar)
