@@ -25,8 +25,9 @@ def roubaCarneiro(vals, pos, conhecidas=''):
     return lista, conhecidas
 
 
-listaDeCarneirosRoubados = roubaCarneiro(listaDeCarneiros, 0)
+if len(listaDeCarneiros) == estrelas:
+    listaDeCarneirosRoubados = roubaCarneiro(listaDeCarneiros, 0)
 
-roubados = sum(listaDeCarneirosRoubados[0])
+    roubados = sum(listaDeCarneirosRoubados[0])
 
-print(len(set(listaDeCarneirosRoubados[1])), roubados)
+    print(len(set(listaDeCarneirosRoubados[1])), roubados)
