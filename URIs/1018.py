@@ -12,4 +12,6 @@ entrada = int(input())
 
 resultado = AchaNotas(entrada, listaDeNotas)
 
-print(resultado)
+print(entrada)
+for tupla in zip(resultado, listaDeNotas):
+    print(tupla[0], 'nota(s) de R$', str(tupla[1])+',00')
