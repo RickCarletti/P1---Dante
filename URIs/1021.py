@@ -1,3 +1,5 @@
+from math import ceil
+
 def AchaNotas(val, listaA, listaB):
     retorno = []
     for i in listaA:
@@ -14,10 +16,11 @@ def AchaNotas(val, listaA, listaB):
     return retorno
 
 
-listaDeNotas = [100, 50, 20, 10, 5, 2]
-listaDeMoedas = [1, 0.50, 0.25, 0.10, 0.05, 0.01]
+listaDeNotas = [10000, 5000, 2000, 1000, 500, 200]
+listaDeMoedas = [100, 50, 25, 10, 5, 1]
 
-entrada = 576.73 # float(input())
+entrada = float(input())
+entrada = ceil(entrada * 100)
 
 resultado = AchaNotas(entrada, listaDeNotas, listaDeMoedas)
 
